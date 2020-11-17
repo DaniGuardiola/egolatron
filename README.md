@@ -8,7 +8,7 @@ Built for fun by [Dani Guardiola](https://daniguardiola.me) ([@daniguardiolame](
 
 ## It stops working randomly, fix it you lazy f%#k!
 
-It's not my fault, it's Twitter and their rate-limiting policy.
+It's not my fault, it's Twitter and its rate-limiting policy.
 
 If you want to understand why this happens, read on.
 
@@ -36,7 +36,7 @@ To get detailed information about the rate limit (remaining requests, when the p
 
 ## How to look under the hood
 
-Other than reading the code itself, you can enable three debugging options that I baked in. To do this, you need to open the devtools console, and switch to the extension content ("Egolatron" instead of "top" in the dropdown). Then, execute the following:
+Other than reading the code itself, you can enable three debugging options that I baked in. To do this, you need to open the devtools console, and switch to the extension context ("Egolatron" instead of "top" in the dropdown). Then, execute the following:
 
 - For detailed logs: `_egolatron.setLog(true)`
 - For detailed stats: `_egolatron.setStats(true)`
