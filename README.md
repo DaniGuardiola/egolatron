@@ -12,7 +12,7 @@ It's not my fault, it's Twitter and its rate-limiting policy.
 
 If you want to understand why this happens, read on.
 
-# It doesn't work if I'm not logged in!
+## It doesn't work if I'm not logged in!
 
 Yep. Can't do anything about it. Sorry. Again, read below to understand why this is the behavior.
 
