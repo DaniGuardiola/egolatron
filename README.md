@@ -18,25 +18,25 @@ Yep. Can't do anything about it. Sorry. Again, read below to understand why this
 
 ## How it works
 
-The extension will check for new tweets in the current DOM in very short intervals. When it finds new tweets it will analyze them by retrieving the list of users who liked it. The API call being used works with pagination, but this approach works because (as far as I have observed) if the author liked the tweet, it shows in the first page.
+The extension will check for new tweets in the current DOM in very short intervals. When it finds new tweets, will analyzes them by retrieving the list of users who liked it and looking for the author. The API call implements pagination, but this approach works because (as far as I have observed) if the author liked the tweet, it shows up on the first page.
 
-The API is used directly from the page's context, reusing the user's (bearer) token that the official Twitter web client has obtained for its own session. This token is retrieved with a hacky but effective method that I came up with after some reverse engineering (feel free to check the code). This approach has a downside: the extension won't work if no user is logged in.
+The API is used directly from the client context, reusing the user's (bearer) token that the official Twitter web client has obtained for its own session. This token is retrieved with a hacky but effective method that I came up with after some reverse engineering (feel free to check the code). This approach has a downside: the extension won't work if no user is logged in.
 
 The requested resource (users who liked a tweet) seems to be part of Twitter's v2 API, but I couldn't find any public documentation, so I'm guessing it is an internal resource that only the official clients have access to.
 
-After a tweet has been analyze, the result is stored in memory (the tweet ID and whether it's been 'self-liked' or not). This reduces the volume of calls needed and allows re-rendering the styles if a previously analyzed tweet comes up on screen again. The memory is reset every time the Twitter page is reloaded, but not when navigating inside the app, so it persists through a full session. Of course, this also means that it doesn't take into account any changes that happen after a tweet has been analyzed.
+After a tweet has been analyzed, the result is stored in memory (the tweet ID and whether it's been 'self-liked' or not). This cache-like behavior reduces the volume of calls and allows re-rendering the styles if a previously analyzed tweet comes up on screen again. The memory is reset every time the Twitter page is reloaded, but not when navigating inside the app, so it persists through a full session. Of course, this also means that it doesn't take into account any changes that happen once a tweet has been analyzed.
 
-The styles are quite simple, just a red border on top, and a (hand-crafted) medal SVG, animated with CSS for extra-fanciness. The styles won't be applied until the tweet is on-screen (fully visible), even if it has been analyzed previously or while off-screen. The animation will start over if the tweet is re-rendered by the Twitter client, which happens by navigating, or just when scrolling, as the Twitter client implements an infinite list for performance reasons.
+The styles are quite simple, just a red border on top, and a (hand-crafted) medal SVG, animated with CSS for extra-fanciness. The styles won't be applied until the tweet is on-screen (fully visible), even if it has been analyzed previously or while off-screen. The animation will start over if the tweet is re-rendered by the Twitter client, which happens by navigating, or just by scrolling, as the Twitter client dynamically loads and unloads the tweets DOM when they are scrolled into and out of view (for performance reasons).
 
 ## The Twitter rate limit
 
 Twitter rate-limits the requests you can send in a certain period of time. If this limit is exceeded, no more requests can be made until the period resets. In my tests, the limits have been 180 requests for every 15-minute block.
 
-To get detailed information about the rate limit (remaining requests, when the period resets and whether the limit has been reached), enable the stats with the instructions below. Any tweets found during the rate-limited state will be ignored.
+To get detailed real-time information about the rate limit state (total requests, remaining requests, when the period resets and whether the limit has been reached), enable the stats with the instructions below. Any new tweets found during the rate-limited state will be ignored.
 
 ## How to look under the hood
 
-Other than reading the code itself, you can enable three debugging options that I baked in. To do this, you need to open the devtools console, and switch to the extension context ("Egolatron" instead of "top" in the dropdown). Then, execute the following:
+Other than by reading the code itself, you can enable three baked-in debugging options. To do this, you need to open the devtools console, and switch to the extension context ("Egolatron" instead of "top" in the dropdown). Then, execute the following:
 
 - For detailed logs: `_egolatron.setLog(true)`
 - For detailed stats: `_egolatron.setStats(true)`
@@ -58,7 +58,7 @@ Enabling debug styles will also enable logs and stats, overriding their individu
 
 Just check the [`extension/content-script.js`](extension/content-script.js) file.
 
-It's all there, well-organized and with many many comments. Maybe too many. Oh, and no dependencies or build process.
+It's all there, well-organized and with many many comments. Maybe too many. There are no dependencies or build scripts.
 
 ## How to thank me for this incredible and necessary contribution to humanity
 
