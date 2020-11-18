@@ -6,13 +6,13 @@ This is a Chrome extension that detects tweets that have been liked by their own
 
 Built for fun by [Dani Guardiola](https://daniguardiola.me) ([@daniguardiolame](https://twitter.com/DaniGuardiola)).
 
-## It stops working randomly, fix it you lazy f%#k!
+### It stops working randomly, fix it you lazy f%#k!
 
 It's not my fault, it's Twitter and its rate-limiting policy.
 
 If you want to understand why this happens, read on.
 
-## It doesn't work if I'm not logged in!
+### It doesn't work if I'm not logged in!
 
 Yep. Can't do anything about it. Sorry. Again, read below to understand why this is the behavior.
 
