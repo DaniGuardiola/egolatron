@@ -62,4 +62,4 @@ It's all there, well-organized and with many many comments. Maybe too many. Ther
 
 ## How to thank me for this incredible and necessary contribution to humanity
 
-Star this repo, follow me on Twitter [@daniguardiolame](https://twitter.com/DaniGuardiola) and check out my website: [daniguardiola.me](https://daniguardiola.me)
+Star this repo, follow me on Twitter [@daniguardiolame](https://twitter.com/daniguardiolame) and check out my website: [daniguardiola.me](https://daniguardiola.me)
