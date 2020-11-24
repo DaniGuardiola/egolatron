@@ -18,7 +18,7 @@ Yep. Can't do anything about it. Sorry. Again, read below to understand why this
 
 ## How it works
 
-The extension will check for new tweets in the current DOM in very short intervals. When it finds new tweets, it will analyze them by retrieving the list of users who liked it and looking for the author. The API call implements pagination, but this approach works because (as far as I have observed) if the author liked the tweet, it shows up on the first page.
+The extension will check for new tweets in the current DOM in very short intervals. When it finds new tweets, it will analyze them by retrieving the list of users who liked them and looking for the author. The API call implements pagination, but this approach works because (as far as I have observed) if the author liked the tweet, it shows up on the first page.
 
 The API is used directly from the client context, reusing the user's (bearer) token that the official Twitter web client has obtained for its own session. This token is retrieved with a hacky but effective method that I came up with after some reverse engineering (feel free to check the code). This approach has a downside: the extension won't work if no user is logged in.
 
