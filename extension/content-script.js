@@ -1,8 +1,8 @@
 // TODO:
 // - Switch to new GraphQL API? (doesn't seem to be rate limited at first sight)
-// - Liked retweets / quotes seem to be broken at times (probably grabbing the wrong link)
 // - Improve CSS animation performance (use only transform)
 // - Add shadows to the SVG
+// - Nicer heart shape
 
 {
   // parameters
