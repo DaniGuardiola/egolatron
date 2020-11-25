@@ -63,3 +63,8 @@ It's all there, well-organized and with many many comments. Maybe too many. Ther
 ## How to thank me for this incredible and necessary contribution to humanity
 
 Star this repo, follow me on Twitter [@daniguardiolame](https://twitter.com/daniguardiolame) and check out my website: [daniguardiola.me](https://daniguardiola.me)
+
+## Changelog
+
+- 1.1: Fixed bearerToken grabber and improved tweet ID and username detection.
+- 1.0: Initial version.
