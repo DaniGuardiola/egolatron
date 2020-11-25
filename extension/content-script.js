@@ -4,6 +4,7 @@
 // - Add shadows to the SVG
 // - Nicer heart shape
 // - Improve specificity of tweet matching to fix #1
+// - MutationObserver?
 
 {
   // parameters
