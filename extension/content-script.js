@@ -5,6 +5,8 @@
 // - Nicer heart shape
 // - Improve specificity of tweet matching to fix #1
 // - MutationObserver?
+// - Handle errors because the drain the rate limit otherwise
+// - Only analyze tweets in / close to viewport?
 
 {
   // parameters
