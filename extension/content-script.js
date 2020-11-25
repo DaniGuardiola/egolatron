@@ -2,6 +2,7 @@
 // - Switch to new GraphQL API? (doesn't seem to be rate limited at first sight)
 // - Liked retweets / quotes seem to be broken at times (probably grabbing the wrong link)
 // - Improve CSS animation performance (use only transform)
+// - Add shadows to the SVG
 
 {
   // parameters
@@ -30,7 +31,7 @@
   window._egolatron = flagSetters
 
   // uncomment line below to enable debug mode
-  // flagSetters.setDebug(true)
+  flagSetters.setDebug(true)
 
   // uncomment line below to enable logging (enabled anyway if debug mode is enabled)
   // flagSetters.setLog(true)
@@ -370,7 +371,7 @@
     // fetch the file and get it as text
     const scriptContent = await (await fetch(scriptUrl)).text()
     // extract the bearer token (stored directly in a minified variable inside the file)
-    const bearerToken = scriptContent.match(/,a="(AAAA[a-zA-Z0-9%]*)/)[1]
+    const bearerToken = scriptContent.match(/"(AAAA[a-zA-Z0-9%]*)/)[1]
     log(`Bearer token obtained: ${bearerToken}`)
     return bearerToken
   }
