@@ -3,6 +3,7 @@
 // - Improve CSS animation performance (use only transform)
 // - Add shadows to the SVG
 // - Nicer heart shape
+// - Improve specificity of tweet matching to fix #1
 
 {
   // parameters
