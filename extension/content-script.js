@@ -31,7 +31,7 @@
   window._egolatron = flagSetters
 
   // uncomment line below to enable debug mode
-  flagSetters.setDebug(true)
+  // flagSetters.setDebug(true)
 
   // uncomment line below to enable logging (enabled anyway if debug mode is enabled)
   // flagSetters.setLog(true)
