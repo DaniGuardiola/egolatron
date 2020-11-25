@@ -66,5 +66,6 @@ Star this repo, follow me on Twitter [@daniguardiolame](https://twitter.com/dani
 
 ## Changelog
 
+- 1.2: Disabled debug mode, which I left enabled by mistake in 1.1.
 - 1.1: Fixed bearerToken grabber and improved tweet ID and username detection.
 - 1.0: Initial version.
