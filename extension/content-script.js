@@ -508,7 +508,9 @@
           link =>
             (match =
               // tweets contain at least one link matching this regexp pattern
-              link.href.match(/\/([a-zA-Z0-9_]+)\/status\/([0-9]+)/) || match)
+              link.href.match(
+                /^https:\/\/twitter\.com\/([a-zA-Z0-9_]+)\/status\/([0-9]+)\/?$/
+              ) || match)
         )
         if (!match) return // no match, this is not a tweet
         const user = match[1]
