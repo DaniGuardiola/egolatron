@@ -65,7 +65,8 @@
   const TWEET_STATUS = {
     CHECKING: 0,
     NOT_SELF_LIKED: 1,
-    SELF_LIKED: 2
+    SELF_LIKED: 2,
+    ERROR: 3
   }
 
   // the state of the extension
@@ -256,13 +257,13 @@
         transition-property: background-color, box-shadow, border-top !important;
         will-change: border-top;
       }
-      
+
       ${notDebug}      
       ${selfLikedTweet}:not(${hidden}) {
         border-top: solid #ff0000 4px;
         border-radius: 4px;
       }
-      
+
       ${notDebug} 
       ${selfLikedTweet} ${cl('medal')} {
         position: absolute;
@@ -274,7 +275,7 @@
         pointer-events: none;
         will-change: top;
       }
-      
+
       ${notDebug} 
       ${selfLikedTweet}:hover ${cl('medal')},
       ${notDebug} 
@@ -292,7 +293,7 @@
         animation-iteration-count: 1, infinite;
         animation-timing-function: ease-in-out, ease-in-out; 
       }
-      
+
       @keyframes ${ego('medal_drop_animation')} {
           0% {
             top: -95px;
@@ -310,7 +311,7 @@
             top: -20px;
           }
       }
-            
+
       @keyframes ${ego('medal_swing_animation')} {
           0% {
             transform: rotate(-4deg) translateX(4px);
@@ -322,7 +323,7 @@
             transform: rotate(-4deg) translateX(4px);
           }
       }
-      
+
       /* debug styles */
 
       ${debug}
@@ -330,16 +331,22 @@
         border-left: solid blue 4px;
         border-radius: 4px;
       }
-      
+
       ${debug}
       ${selfLikedTweet} {
         border-left: solid red 4px;
         border-radius: 4px;
       }
-      
+
       ${debug}
       ${tweet(TWEET_STATUS.NOT_SELF_LIKED)} {
         border-left: solid green 4px;
+        border-radius: 4px;
+      }
+
+      ${debug}
+      ${tweet(TWEET_STATUS.ERROR)} {
+        border-left: solid purple 4px;
         border-radius: 4px;
       }
     `
@@ -448,13 +455,14 @@
     // get the result as JSON
     const jsonResult = await response.json()
     if (jsonResult.errors) {
-      if (jsonResult.errors.find(({ code }) => code === RATE_LIMIT_ERROR_CODE))
-        activateRateLimited()
-      throw Error(
+      const error = new Error(
         `Errors fetching tweet likes: ${jsonResult.errors
           .map(({ message, code }) => `${code} - ${message}`)
           .join(', ')}`
       )
+      if (jsonResult.errors.find(({ code }) => code === RATE_LIMIT_ERROR_CODE))
+        error.rateLimit = true
+      throw error
     }
     // extract and return the screen names of users who liked the tweet
     return Object.values(jsonResult.globalObjects.users).map(
@@ -544,8 +552,11 @@
       }
       renderTweet(state.tweets[id], element)
     } catch (error) {
-      delete state.tweets[id]
-      renderTweet(null, element)
+      if (error.rateLimit) {
+        activateRateLimited()
+        delete state.tweets[id]
+      } else state.tweets[id] = TWEET_STATUS.ERROR
+      renderTweet(state.tweets[id], element)
       warn(error)
     }
   }
