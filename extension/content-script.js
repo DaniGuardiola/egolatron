@@ -506,7 +506,7 @@
     return tweetEls
       .map(element => {
         // obtain all links inside the article element
-        const links = [...element.querySelectorAll('a')]
+        const links = [...element.querySelectorAll(':not([lang]) > a')]
         let match
         links.forEach(
           link =>
