@@ -1,12 +1,11 @@
 // TODO:
 // - Switch to new GraphQL API? (doesn't seem to be rate limited at first sight)
 // - Improve CSS animation performance (use only transform)
-// - Add shadows to the SVG
-// - Nicer heart shape
-// - Improve specificity of tweet matching to fix #1
-// - MutationObserver?
-// - Handle errors because the drain the rate limit otherwise
+// - Use MutationObserver instead of infinite loop?
 // - Only analyze tweets in / close to viewport?
+// - Display stats somewhere?
+// - Shamelessly self-promote my twitter account?
+// - Option to share a capture of a self-liked tweet on Twitter
 
 {
   // parameters
