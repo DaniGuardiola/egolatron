@@ -7,31 +7,24 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 57.999998 57.999998"
-   class="${ego(     'medal'   )}"
+   viewBox="0 0 60.865 167.91"
    version="1.1"
-   id="svg124"
-   sodipodi:docname="icon-small.svg"
-   width="58"
-   height="58"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   inkscape:export-filename="/home/dani/projects/open-source/egolatron/extension/icons/icon32.png"
-   inkscape:export-xdpi="52.965519"
-   inkscape:export-ydpi="52.965519">
+   id="svg2502"
+   sodipodi:docname="medal.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <metadata
-     id="metadata130">
+     id="metadata2508">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs128">
+     id="defs2506">
     <filter
        style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow"
@@ -99,34 +92,98 @@
     <filter
        style="color-interpolation-filters:sRGB;"
        inkscape:label="Drop Shadow"
-       id="filter2432">
+       id="filter2605">
       <feFlood
          flood-opacity="0.498039"
          flood-color="rgb(0,0,0)"
          result="flood"
-         id="feFlood2422" />
+         id="feFlood2595" />
       <feComposite
          in="flood"
          in2="SourceGraphic"
          operator="in"
          result="composite1"
-         id="feComposite2424" />
+         id="feComposite2597" />
       <feGaussianBlur
          in="composite1"
          stdDeviation="0.5"
          result="blur"
-         id="feGaussianBlur2426" />
+         id="feGaussianBlur2599" />
       <feOffset
          dx="0.6"
          dy="0.6"
          result="offset"
-         id="feOffset2428" />
+         id="feOffset2601" />
       <feComposite
          in="SourceGraphic"
          in2="offset"
          operator="over"
          result="composite2"
-         id="feComposite2430" />
+         id="feComposite2603" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter2617">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood2607" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite2609" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.5"
+         result="blur"
+         id="feGaussianBlur2611" />
+      <feOffset
+         dx="0.6"
+         dy="0.6"
+         result="offset"
+         id="feOffset2613" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite2615" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter2629">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood2619" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite2621" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.5"
+         result="blur"
+         id="feGaussianBlur2623" />
+      <feOffset
+         dx="0.6"
+         dy="0.6"
+         result="offset"
+         id="feOffset2625" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite2627" />
     </filter>
   </defs>
   <sodipodi:namedview
@@ -138,43 +195,53 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="960"
-     inkscape:window-height="526"
-     id="namedview126"
+     inkscape:window-width="1920"
+     inkscape:window-height="1053"
+     id="namedview2504"
      showgrid="false"
-     inkscape:zoom="7.2601517"
-     inkscape:cx="15.966323"
-     inkscape:cy="21.278412"
-     inkscape:window-x="1208"
-     inkscape:window-y="1993"
+     inkscape:zoom="5.2409028"
+     inkscape:cx="30.432501"
+     inkscape:cy="76.322729"
+     inkscape:window-x="248"
+     inkscape:window-y="1467"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g122"
-     inkscape:document-rotation="0" />
+     inkscape:current-layer="svg2502" />
+  <path
+     fill="#aa0000"
+     fill-rule="evenodd"
+     d="M 44.649,1.701 60.865,10.713 33.644,134.015 17.428,125.003 Z"
+     id="path2490"
+     style="filter:url(#filter2617)" />
+  <path
+     fill="#ff0000"
+     fill-rule="evenodd"
+     d="M 0,5.8 17.007,0 33.795,127.914 16.788,133.713 Z"
+     id="path2492"
+     style="filter:url(#filter2629)" />
+  <circle
+     cx="25.356997"
+     cy="143.12189"
+     fill="#ffd42a"
+     id="circle2494"
+     r="23.332001"
+     style="filter:url(#filter2605)" />
   <g
-     transform="translate(-74.297997,-126.955)"
-     id="g122">
+     id="g2593"
+     transform="translate(-5.7948964,-28.112582)">
     <circle
-       cx="103.298"
-       cy="155.955"
-       r="28.446253"
-       fill="#ffd42a"
-       id="circle116"
-       style="stroke-width:1.21919;filter:url(#filter2432)" />
-    <circle
-       cx="83.526787"
-       cy="113.30984"
+       cx="31.151892"
+       cy="171.23447"
        r="18.165001"
        fill="none"
        stroke="#d4aa00"
        stroke-width="3.893"
-       id="circle118-3"
-       style="stroke-width:2.84452;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter1367)"
-       transform="matrix(1.3707099,0,0,1.3707099,-11.192995,0.64008783)" />
+       id="circle118"
+       style="filter:url(#filter1367)" />
     <path
        d="m 108.808,147.36 a 6.673,6.673 0 0 0 -5.51,2.876 6.75,6.75 0 0 0 -5.509,-2.876 6.757,6.757 0 0 0 -6.75,6.75 c 0,9.203 9.566,17.77 12.26,17.77 2.694,0 12.26,-8.597 12.26,-17.77 a 6.757,6.757 0 0 0 -6.75,-6.75 z"
        fill="#e0245e"
-       id="path120-6"
-       transform="matrix(1.6394175,0,0,1.4777577,-66.052199,-76.900558)"
+       id="path120"
+       transform="matrix(1.0508438,0,0,0.94722215,-77.399224,21.329961)"
        style="filter:url(#filter1427)" />
   </g>
 </svg>

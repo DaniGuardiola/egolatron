@@ -357,14 +357,51 @@
   <svg viewBox="0 0 60.865 167.91" xmlns="http://www.w3.org/2000/svg" class="${ego(
     'medal'
   )}">
-    <g transform="translate(-72.273 -13.83)">
-      <path fill="#a00" fill-rule="evenodd" d="M116.922 15.531l16.216 9.012-27.221 123.302-16.216-9.012z" />
-      <path fill="red" fill-rule="evenodd" d="M72.273 19.63l17.007-5.8 16.788 127.914-17.007 5.799z" />
-      <circle cx="97.63" cy="158.41" r="23.332" fill="#ffd42a" />
-      <circle cx="97.63" cy="158.41" r="18.165" fill="none" stroke="#d4aa00" stroke-width="3.893" />
-      <path
-        d="M103.14 147.36a6.673 6.673 0 00-5.51 2.876 6.75 6.75 0 00-5.509-2.876 6.757 6.757 0 00-6.75 6.75c0 9.203 9.566 17.77 12.26 17.77 2.694 0 12.26-8.597 12.26-17.77a6.757 6.757 0 00-6.75-6.75z"
-        fill="#e0245e" />
+    <defs>
+      <filter id="d" color-interpolation-filters="sRGB">
+        <feFlood flood-color="#000" flood-opacity=".498" result="flood" />
+        <feComposite in="flood" in2="SourceGraphic" operator="out" result="composite1" />
+        <feGaussianBlur in="composite1" result="blur" stdDeviation=".8" />
+        <feOffset dx=".6" dy=".6" result="offset" />
+        <feComposite in="offset" in2="SourceGraphic" operator="atop" result="composite2" />
+      </filter>
+      <filter id="e" color-interpolation-filters="sRGB">
+        <feFlood flood-color="#000" flood-opacity=".498" result="flood" />
+        <feComposite in="flood" in2="SourceGraphic" operator="out" result="composite1" />
+        <feGaussianBlur in="composite1" result="blur" stdDeviation=".5" />
+        <feOffset dx=".6" dy=".6" result="offset" />
+        <feComposite in="offset" in2="SourceGraphic" operator="atop" result="composite2" />
+      </filter>
+      <filter id="c" color-interpolation-filters="sRGB">
+        <feFlood flood-color="#000" flood-opacity=".498" result="flood" />
+        <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1" />
+        <feGaussianBlur in="composite1" result="blur" stdDeviation=".5" />
+        <feOffset dx=".6" dy=".6" result="offset" />
+        <feComposite in="SourceGraphic" in2="offset" result="composite2" />
+      </filter>
+      <filter id="a" color-interpolation-filters="sRGB">
+        <feFlood flood-color="#000" flood-opacity=".498" result="flood" />
+        <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1" />
+        <feGaussianBlur in="composite1" result="blur" stdDeviation=".5" />
+        <feOffset dx=".6" dy=".6" result="offset" />
+        <feComposite in="SourceGraphic" in2="offset" result="composite2" />
+      </filter>
+      <filter id="b" color-interpolation-filters="sRGB">
+        <feFlood flood-color="#000" flood-opacity=".498" result="flood" />
+        <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1" />
+        <feGaussianBlur in="composite1" result="blur" stdDeviation=".5" />
+        <feOffset dx=".6" dy=".6" result="offset" />
+        <feComposite in="SourceGraphic" in2="offset" result="composite2" />
+      </filter>
+    </defs>
+    <path d="M44.649 1.701l16.216 9.012-27.221 123.3-16.216-9.012z" fill="#a00" fill-rule="evenodd" filter="url(#a)" />
+    <path d="M0 5.8L17.007 0l16.788 127.91-17.007 5.799z" fill="red" fill-rule="evenodd" filter="url(#b)" />
+    <circle cx="25.357" cy="143.12" r="23.332" fill="#ffd42a" filter="url(#c)" />
+    <g transform="translate(-5.795 -28.113)">
+      <circle cx="31.152" cy="171.23" r="18.165" fill="none" filter="url(#d)" stroke="#d4aa00" stroke-width="3.893" />
+      <path transform="matrix(1.0508 0 0 .94722 -77.399 21.33)"
+        d="M108.81 147.36a6.673 6.673 0 00-5.51 2.876 6.75 6.75 0 00-5.509-2.876 6.757 6.757 0 00-6.75 6.75c0 9.203 9.566 17.77 12.26 17.77s12.26-8.597 12.26-17.77a6.757 6.757 0 00-6.75-6.75z"
+        fill="#e0245e" filter="url(#e)" />
     </g>
   </svg>
   `
