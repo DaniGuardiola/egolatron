@@ -2,7 +2,7 @@
 
 This is a Chrome extension that detects tweets that have been liked by their own authors, and highlights them with shiny self-love medals!
 
-[![Available on the Chrome Webstore](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_496x150.png)](https://chrome.google.com/webstore/detail/egolatron/gncgbgdmioamlfdcliheeepnmgknlekm)
+[![Available on the Chrome Webstore](https://daniguardio.la/img/webstore-promo.png)](https://chrome.google.com/webstore/detail/egolatron/gncgbgdmioamlfdcliheeepnmgknlekm)
 
 Built for fun by [Dani Guardiola](https://daniguardiola.me) ([@daniguardiolame](https://twitter.com/DaniGuardiola)).
 
